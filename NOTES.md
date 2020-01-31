@@ -1,5 +1,5 @@
 <b>Loss accuracy</b>
-
+* test *
 In general, dpinger works a bit differently than other latency monitors. Rather than a "probe" that fires off and processes a handful of echo request/replies all at once, dpinger maintains a rolling array of echo requests spaced on the send interval. In other words, instead of waking up every second and sending 4 echo requests at once, dpinger sends an echo request every 250 milliseconds. When dpinger receives an echo reply, the time difference between the request packet and reply packet (latency) is recorded. There is nothing that times out an echo request/reply and records it as permanently lost.
 
 When the alert check is made, or a report is generated, dpinger goes through the array and examines each echo request. If a reply has been received, it is used as part of the overall latency calculation. If a reply has not yet been received, the amount of time since the request is compared against the loss interval. If it is greater than the loss interval, the request/reply is counted as lost in the current report. However the concept of the request/reply being lost is not a permanent decision. In subsequent reports, if a the missing reply has been received, its latency will be used instead of being counted as lost.
