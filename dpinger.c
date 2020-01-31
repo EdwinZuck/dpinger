@@ -29,7 +29,7 @@
 
 
 // Silly that this is required for accept4 on Linux
-#define _GNU_SOURCE
+#define _GNU_SOURCE__
 
 
 #include <stdio.h>
