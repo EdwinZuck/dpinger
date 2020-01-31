@@ -1,6 +1,6 @@
 # dpinger
 
-dpinger is a daemon for continuous monitoring of latency and loss on a network connection. It is
+dpinger est a daemon for continuous monitoring of latency and loss on a network connection. It is
 intended for use by firewalls to monitor link health, as well as for providing information to
 various monitoring systems such as Cacti, Nagios, Zabbix, etc. 
 
